@@ -1,6 +1,8 @@
 # KMeansSwift
 
-This is a unsupervised machine learning algorithm K-means realized by Swift
+###This is a unsupervised machine learning algorithm K-means realized by Swift
+
+###It can be used in N-dimensional space!
 
 Demo
 ------
@@ -9,6 +11,7 @@ Demo
 How to use
 ------
 Just drag the KMeans.swift into your project.
+
 I will write some detail about this algorithm soon.
 
 Author
