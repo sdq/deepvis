@@ -32,6 +32,9 @@ class ViewController: UIViewController {
     
     // MARK: Action
     @IBAction func start3Clustering(sender: UIButton) {
+        if KMeans.vectors.count < 3 {
+            return
+        }
         setButtonEnable(false)
         KMeans.clusteringNumber = 3
         KMeans.clustering(500) { [unowned self] (success, centroids, clusters) -> () in
@@ -59,6 +62,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func start2Clustering(sender: UIButton) {
+        if KMeans.vectors.count < 2 {
+            return
+        }
         setButtonEnable(false)
         KMeans.clusteringNumber = 2
         KMeans.clustering(500) { [unowned self] (success, centroids, clusters) -> () in
@@ -85,6 +91,12 @@ class ViewController: UIViewController {
     
     @IBAction func clickGithubItem(sender: UIBarButtonItem) {
         let svc = SFSafariViewController(URL: NSURL(string: "https://github.com/sdq/KMeansSwift")!)
+        svc.delegate = self
+        self.presentViewController(svc, animated: true, completion: nil)
+    }
+    
+    @IBAction func clickWikiItem(sender: UIBarButtonItem) {
+        let svc = SFSafariViewController(URL: NSURL(string: "https://en.wikipedia.org/wiki/K-means_clustering")!)
         svc.delegate = self
         self.presentViewController(svc, animated: true, completion: nil)
     }

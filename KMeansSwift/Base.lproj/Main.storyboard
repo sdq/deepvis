@@ -107,6 +107,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="K-means" id="cW8-4S-N5B">
+                        <barButtonItem key="leftBarButtonItem" title="WiKi" id="IHa-ez-Z8S">
+                            <connections>
+                                <action selector="clickWikiItem:" destination="BYZ-38-t0r" id="yCO-6d-ifw"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="GitHub" id="xmd-p1-CCF">
                             <connections>
                                 <action selector="clickGithubItem:" destination="BYZ-38-t0r" id="AhU-oL-kUY"/>

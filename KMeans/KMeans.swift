@@ -32,30 +32,33 @@ class KMeansSwift {
     var dimension:Int = 2
     //clustering number K
     var clusteringNumber:Int = 2
-    //vectors
-    var vectors = KMVectors()
-    //centroids
-    var centroids = KMVectors()
-    //clusters
-    var clusters = Array<KMVectors>()
-    //final centroids
-    var finalCentroids = KMVectors()
-    //final clusters
-    var finalClusters = Array<KMVectors>()
     //max interation
     var maxIteration = 100
     //convergence error
     var convergenceError = 0.01
     //number of excution
     var numberOfExcution = 1
+    //vectors
+    var vectors = KMVectors()
+    //final centroids
+    var finalCentroids = KMVectors()
+    //final clusters
+    var finalClusters = Array<KMVectors>()
+    //temp centroids
+    private var centroids = KMVectors()
+    //temp clusters
+    private var clusters = Array<KMVectors>()
     
     //MARK: Public
     
     //check parameters
-    func checkAllParameters() throws {
-//        guard dimension != nil else { throw KMeansError.NoDimension }
-//        guard clusteringNumber != nil else { throw KMeansError.NoClusteringNumber }
-        
+    func checkAllParameters() -> Bool {
+        if dimension < 1 { return false }
+        if clusteringNumber < 1 { return false }
+        if maxIteration < 1 { return false }
+        if numberOfExcution < 1 { return false }
+        if vectors.count < clusteringNumber { return false }
+        return true
     }
     
     //add vectors
