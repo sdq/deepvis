@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ezV-gd-Gvj">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -108,11 +107,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="K-means" id="cW8-4S-N5B">
                         <barButtonItem key="leftBarButtonItem" title="WiKi" id="IHa-ez-Z8S">
+                            <color key="tintColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="clickWikiItem:" destination="BYZ-38-t0r" id="yCO-6d-ifw"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="GitHub" id="xmd-p1-CCF">
+                            <color key="tintColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="clickGithubItem:" destination="BYZ-38-t0r" id="AhU-oL-kUY"/>
                             </connections>
