@@ -12,19 +12,13 @@
 		3256FCC91C2977E200FFD557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3256FCC71C2977E200FFD557 /* Main.storyboard */; };
 		3256FCCB1C2977E200FFD557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3256FCCA1C2977E200FFD557 /* Assets.xcassets */; };
 		3256FCCE1C2977E200FFD557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3256FCCC1C2977E200FFD557 /* LaunchScreen.storyboard */; };
-		3256FCD91C2977E200FFD557 /* KMeansSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256FCD81C2977E200FFD557 /* KMeansSwiftTests.swift */; };
 		3256FCE51C29784100FFD557 /* KMeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256FCE41C29784100FFD557 /* KMeans.swift */; };
+		325787FF1DD4725B007F31B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325787FE1DD4725B007F31B9 /* AppDelegate.swift */; };
+		325788011DD4725B007F31B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325788001DD4725B007F31B9 /* ViewController.swift */; };
+		325788031DD4725B007F31B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325788021DD4725B007F31B9 /* Assets.xcassets */; };
+		325788061DD4725C007F31B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325788041DD4725C007F31B9 /* Main.storyboard */; };
+		3257880B1DD47266007F31B9 /* KMeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256FCE41C29784100FFD557 /* KMeans.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3256FCD51C2977E200FFD557 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3256FCB81C2977E200FFD557 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3256FCBF1C2977E200FFD557;
-			remoteInfo = KMeansSwift;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3256FCC01C2977E200FFD557 /* KMeansSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMeansSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,10 +28,13 @@
 		3256FCCA1C2977E200FFD557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3256FCCD1C2977E200FFD557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3256FCCF1C2977E200FFD557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3256FCD41C2977E200FFD557 /* KMeansSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMeansSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3256FCD81C2977E200FFD557 /* KMeansSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMeansSwiftTests.swift; sourceTree = "<group>"; };
-		3256FCDA1C2977E200FFD557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3256FCE41C29784100FFD557 /* KMeans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMeans.swift; sourceTree = "<group>"; };
+		325787FC1DD4725B007F31B9 /* KMeansSwiftMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMeansSwiftMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		325787FE1DD4725B007F31B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		325788001DD4725B007F31B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		325788021DD4725B007F31B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		325788051DD4725C007F31B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		325788071DD4725C007F31B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +45,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3256FCD11C2977E200FFD557 /* Frameworks */ = {
+		325787F91DD4725B007F31B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,7 +60,7 @@
 			children = (
 				3256FCE31C29781C00FFD557 /* KMeans */,
 				3256FCC21C2977E200FFD557 /* KMeansSwift */,
-				3256FCD71C2977E200FFD557 /* KMeansSwiftTests */,
+				325787FD1DD4725B007F31B9 /* KMeansSwiftMac */,
 				3256FCC11C2977E200FFD557 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				3256FCC01C2977E200FFD557 /* KMeansSwift.app */,
-				3256FCD41C2977E200FFD557 /* KMeansSwiftTests.xctest */,
+				325787FC1DD4725B007F31B9 /* KMeansSwiftMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,21 +87,24 @@
 			path = KMeansSwift;
 			sourceTree = "<group>";
 		};
-		3256FCD71C2977E200FFD557 /* KMeansSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				3256FCD81C2977E200FFD557 /* KMeansSwiftTests.swift */,
-				3256FCDA1C2977E200FFD557 /* Info.plist */,
-			);
-			path = KMeansSwiftTests;
-			sourceTree = "<group>";
-		};
 		3256FCE31C29781C00FFD557 /* KMeans */ = {
 			isa = PBXGroup;
 			children = (
 				3256FCE41C29784100FFD557 /* KMeans.swift */,
 			);
 			path = KMeans;
+			sourceTree = "<group>";
+		};
+		325787FD1DD4725B007F31B9 /* KMeansSwiftMac */ = {
+			isa = PBXGroup;
+			children = (
+				325787FE1DD4725B007F31B9 /* AppDelegate.swift */,
+				325788001DD4725B007F31B9 /* ViewController.swift */,
+				325788021DD4725B007F31B9 /* Assets.xcassets */,
+				325788041DD4725C007F31B9 /* Main.storyboard */,
+				325788071DD4725C007F31B9 /* Info.plist */,
+			);
+			path = KMeansSwiftMac;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,23 +127,22 @@
 			productReference = 3256FCC01C2977E200FFD557 /* KMeansSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3256FCD31C2977E200FFD557 /* KMeansSwiftTests */ = {
+		325787FB1DD4725B007F31B9 /* KMeansSwiftMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3256FCE01C2977E200FFD557 /* Build configuration list for PBXNativeTarget "KMeansSwiftTests" */;
+			buildConfigurationList = 325788081DD4725C007F31B9 /* Build configuration list for PBXNativeTarget "KMeansSwiftMac" */;
 			buildPhases = (
-				3256FCD01C2977E200FFD557 /* Sources */,
-				3256FCD11C2977E200FFD557 /* Frameworks */,
-				3256FCD21C2977E200FFD557 /* Resources */,
+				325787F81DD4725B007F31B9 /* Sources */,
+				325787F91DD4725B007F31B9 /* Frameworks */,
+				325787FA1DD4725B007F31B9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3256FCD61C2977E200FFD557 /* PBXTargetDependency */,
 			);
-			name = KMeansSwiftTests;
-			productName = KMeansSwiftTests;
-			productReference = 3256FCD41C2977E200FFD557 /* KMeansSwiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = KMeansSwiftMac;
+			productName = KMeansSwiftMac;
+			productReference = 325787FC1DD4725B007F31B9 /* KMeansSwiftMac.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -151,16 +150,18 @@
 		3256FCB81C2977E200FFD557 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = sdq;
 				TargetAttributes = {
 					3256FCBF1C2977E200FFD557 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
 					};
-					3256FCD31C2977E200FFD557 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 3256FCBF1C2977E200FFD557;
+					325787FB1DD4725B007F31B9 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = H95RU58B4T;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -178,7 +179,7 @@
 			projectRoot = "";
 			targets = (
 				3256FCBF1C2977E200FFD557 /* KMeansSwift */,
-				3256FCD31C2977E200FFD557 /* KMeansSwiftTests */,
+				325787FB1DD4725B007F31B9 /* KMeansSwiftMac */,
 			);
 		};
 /* End PBXProject section */
@@ -194,10 +195,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3256FCD21C2977E200FFD557 /* Resources */ = {
+		325787FA1DD4725B007F31B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325788031DD4725B007F31B9 /* Assets.xcassets in Resources */,
+				325788061DD4725C007F31B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,23 +217,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3256FCD01C2977E200FFD557 /* Sources */ = {
+		325787F81DD4725B007F31B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3256FCD91C2977E200FFD557 /* KMeansSwiftTests.swift in Sources */,
+				325788011DD4725B007F31B9 /* ViewController.swift in Sources */,
+				325787FF1DD4725B007F31B9 /* AppDelegate.swift in Sources */,
+				3257880B1DD47266007F31B9 /* KMeans.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3256FCD61C2977E200FFD557 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3256FCBF1C2977E200FFD557 /* KMeansSwift */;
-			targetProxy = 3256FCD51C2977E200FFD557 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3256FCC71C2977E200FFD557 /* Main.storyboard */ = {
@@ -247,6 +244,14 @@
 				3256FCCD1C2977E200FFD557 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		325788041DD4725C007F31B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325788051DD4725C007F31B9 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -344,6 +349,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.shidanqing.kmeans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -356,30 +362,51 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.shidanqing.kmeans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		3256FCE11C2977E200FFD557 /* Debug */ = {
+		325788091DD4725C007F31B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = KMeansSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sdq.KMeansSwiftTests;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H95RU58B4T;
+				INFOPLIST_FILE = KMeansSwiftMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = net.shidanqing.KMeansSwiftMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMeansSwift.app/KMeansSwift";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		3256FCE21C2977E200FFD557 /* Release */ = {
+		3257880A1DD4725C007F31B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = KMeansSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sdq.KMeansSwiftTests;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H95RU58B4T;
+				INFOPLIST_FILE = KMeansSwiftMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = net.shidanqing.KMeansSwiftMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMeansSwift.app/KMeansSwift";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -404,14 +431,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3256FCE01C2977E200FFD557 /* Build configuration list for PBXNativeTarget "KMeansSwiftTests" */ = {
+		325788081DD4725C007F31B9 /* Build configuration list for PBXNativeTarget "KMeansSwiftMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3256FCE11C2977E200FFD557 /* Debug */,
-				3256FCE21C2977E200FFD557 /* Release */,
+				325788091DD4725C007F31B9 /* Debug */,
+				3257880A1DD4725C007F31B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

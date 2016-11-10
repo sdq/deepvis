@@ -20,9 +20,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: "tapSpaceView:")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapSpaceView(_:)))
         spaceView.addGestureRecognizer(tapGesture)
-        spaceView.userInteractionEnabled = true
+        spaceView.isUserInteractionEnabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: Action
-    @IBAction func start3Clustering(sender: UIButton) {
+    @IBAction func start3Clustering(_ sender: UIButton) {
         if KMeans.vectors.count < 3 {
             return
         }
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
                 }
                 for index in 0...2 {
                     for vector in clusters[index] {
-                        let pointFrame = CGRectMake(CGFloat(vector[0]) - 10, CGFloat(vector[1]) - 10, 20.0, 20.0)
+                        let pointFrame = CGRect(x: CGFloat(vector[0]) - 10, y: CGFloat(vector[1]) - 10, width: 20.0, height: 20.0)
                         let point = UIImageView(frame: pointFrame)
                         if index == 0 {
                             point.image = UIImage(named: "red")
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func start2Clustering(sender: UIButton) {
+    @IBAction func start2Clustering(_ sender: UIButton) {
         if KMeans.vectors.count < 2 {
             return
         }
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
                 }
                 for index in 0...1 {
                     for vector in clusters[index] {
-                        let pointFrame = CGRectMake(CGFloat(vector[0]) - 10, CGFloat(vector[1]) - 10, 20.0, 20.0)
+                        let pointFrame = CGRect(x: CGFloat(vector[0]) - 10, y: CGFloat(vector[1]) - 10, width: 20.0, height: 20.0)
                         let point = UIImageView(frame: pointFrame)
                         if index == 0 {
                             point.image = UIImage(named: "red")
@@ -89,19 +89,19 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func clickGithubItem(sender: UIBarButtonItem) {
-        let svc = SFSafariViewController(URL: NSURL(string: "https://github.com/sdq/KMeansSwift")!)
+    @IBAction func clickGithubItem(_ sender: UIBarButtonItem) {
+        let svc = SFSafariViewController(url: URL(string: "https://github.com/sdq/KMeansSwift")!)
         svc.delegate = self
-        self.presentViewController(svc, animated: true, completion: nil)
+        self.present(svc, animated: true, completion: nil)
     }
     
-    @IBAction func clickWikiItem(sender: UIBarButtonItem) {
-        let svc = SFSafariViewController(URL: NSURL(string: "https://en.wikipedia.org/wiki/K-means_clustering")!)
+    @IBAction func clickWikiItem(_ sender: UIBarButtonItem) {
+        let svc = SFSafariViewController(url: URL(string: "https://en.wikipedia.org/wiki/K-means_clustering")!)
         svc.delegate = self
-        self.presentViewController(svc, animated: true, completion: nil)
+        self.present(svc, animated: true, completion: nil)
     }
     
-    @IBAction func clearAll(sender: UIButton) {
+    @IBAction func clearAll(_ sender: UIButton) {
         setButtonEnable(false)
         KMeans.reset()
         for point:UIView in self.spaceView.subviews {
@@ -110,19 +110,23 @@ class ViewController: UIViewController {
         setButtonEnable(true)
     }
     
-    func tapSpaceView(recognizer:UITapGestureRecognizer) {
-        let location = recognizer.locationInView(spaceView)
-        let pointFrame = CGRectMake(location.x - 10, location.y - 10, 20, 20)
+    func tapSpaceView(_ recognizer:UITapGestureRecognizer) {
+        let location = recognizer.location(in: spaceView)
+        let pointFrame = CGRect(x: location.x - 10, y: location.y - 10, width: 20, height: 20)
         let grayPoint = UIImageView(frame: pointFrame)
         grayPoint.image = UIImage(named: "gray")
         spaceView.addSubview(grayPoint)
         KMeans.addVector([Double(location.x), Double(location.y)])
     }
     
-    private func setButtonEnable(enable:Bool) {
-        clusterButton1.enabled = enable
-        clusterButton2.enabled = enable
-        clearButton.enabled = enable
+    fileprivate func setButtonEnable(_ enable:Bool) {
+        clusterButton1.isEnabled = enable
+        clusterButton2.isEnabled = enable
+        clearButton.isEnabled = enable
+    }
+    
+    fileprivate func drawLine(from: CGPoint, to: CGPoint) {
+        
     }
 
 }
@@ -130,9 +134,9 @@ class ViewController: UIViewController {
 // MARK: SFSafariViewControllerDelegate
 
 extension ViewController: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(controller: SFSafariViewController)
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController)
     {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
 }
 

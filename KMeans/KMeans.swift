@@ -13,18 +13,18 @@ import Darwin
 typealias KMVectors = Array<[Double]>
 typealias KMVector = [Double]
 
-enum KMeansError: ErrorType {
-    case NoDimension
-    case NoClusteringNumber
-    case NoVectors
-    case ClusteringNumberLargerThanVectorsNumber
-    case OtherReason(String)
+enum KMeansError: Error {
+    case noDimension
+    case noClusteringNumber
+    case noVectors
+    case clusteringNumberLargerThanVectorsNumber
+    case otherReason(String)
 }
 
 class KMeansSwift {
     
     static let sharedInstance = KMeansSwift()
-    private init() {}
+    fileprivate init() {}
     
     //MARK: Parameter
     
@@ -45,9 +45,9 @@ class KMeansSwift {
     //final clusters
     var finalClusters = Array<KMVectors>()
     //temp centroids
-    private var centroids = KMVectors()
+    fileprivate var centroids = KMVectors()
     //temp clusters
-    private var clusters = Array<KMVectors>()
+    fileprivate var clusters = Array<KMVectors>()
     
     //MARK: Public
     
@@ -62,20 +62,20 @@ class KMeansSwift {
     }
     
     //add vectors
-    func addVector(newVector:KMVector) {
+    func addVector(_ newVector:KMVector) {
         vectors.append(newVector)
     }
     
-    func addVectors(newVectors:KMVectors) {
+    func addVectors(_ newVectors:KMVectors) {
         for newVector:KMVector in newVectors {
             addVector(newVector)
         }
     }
     
     //clustering
-    func clustering(numberOfExcutions:Int, completion:(success:Bool, centroids:KMVectors, clusters:[KMVectors])->()) {
+    func clustering(_ numberOfExcutions:Int, completion:(_ success:Bool, _ centroids:KMVectors, _ clusters:[KMVectors])->()) {
         beginClusteringWithNumberOfExcution(numberOfExcutions)
-        return completion(success: true, centroids: finalCentroids, clusters: finalClusters)
+        return completion(true, finalCentroids, finalClusters)
     }
     
     func reset() {
@@ -89,7 +89,7 @@ class KMeansSwift {
     //MARK: Private
     
     // 1: pick initial clustering centroids randomly
-    private func pickingInitialCentroidsRandomly() {
+    fileprivate func pickingInitialCentroidsRandomly() {
         let indexes = vectors.count.indexRandom[0..<clusteringNumber]
         var initialCenters = KMVectors()
         for index:Int in indexes {
@@ -99,7 +99,7 @@ class KMeansSwift {
     }
     
     // 2: assign each vector to the group that has the closest centroid.
-    private func assignVectorsToTheGroup() {
+    fileprivate func assignVectorsToTheGroup() {
         clusters.removeAll()
         for _ in 0..<clusteringNumber {
             clusters.append([])
@@ -122,11 +122,11 @@ class KMeansSwift {
     }
     
     // 3: recalculate the positions of the K centroids. (return move distance square)
-    private func recalculateCentroids() -> Double {
+    fileprivate func recalculateCentroids() -> Double {
         var moveDistanceSquare = 0.0
         for index in 0..<clusteringNumber {
-            var newCentroid = KMVector(count: dimension, repeatedValue: 0.0)
-            let vectorSum = clusters[index].reduce(newCentroid, combine: { vectorAddition($0, anotherVector: $1) })
+            var newCentroid = KMVector(repeating: 0.0, count: dimension)
+            let vectorSum = clusters[index].reduce(newCentroid, { vectorAddition($0, anotherVector: $1) })
             var s = Double(clusters[index].count)
             vDSP_vsdivD(vectorSum, 1, &s, &newCentroid, 1, vDSP_Length(vectorSum.count))
             if moveDistanceSquare < EuclideanDistanceSquare(centroids[index], v2: newCentroid) {
@@ -140,7 +140,7 @@ class KMeansSwift {
     }
     
     // 4: repeat 2,3 until the new centroids cannot move larger than convergenceError or the iteration is over than maxIteration
-    private func beginClustering() -> Double {
+    fileprivate func beginClustering() -> Double {
         pickingInitialCentroidsRandomly()
         var iteration = 0
         var moveDistance = 1.0
@@ -153,7 +153,7 @@ class KMeansSwift {
     }
     
     // the cost function
-    private func costFunction() -> Double {
+    fileprivate func costFunction() -> Double {
         var cost = 0.0
         for index in 0..<clusteringNumber {
             for vector in clusters[index] {
@@ -164,7 +164,8 @@ class KMeansSwift {
     }
     
     // 5: excute again (up to the number of excution), then choose the best result
-    private func beginClusteringWithNumberOfExcution(var number:Int) {
+    private func beginClusteringWithNumberOfExcution(_ number:Int) {
+        var number = number
         if number < 1 { return }
         var cost = -1.0
         while number > 0 {
@@ -183,20 +184,20 @@ class KMeansSwift {
 //MARK: Helper
 
 //Add Vector
-private func vectorAddition(vector:KMVector, anotherVector:KMVector) -> KMVector {
-    var addresult = KMVector(count : vector.count, repeatedValue : 0.0)
+private func vectorAddition(_ vector:KMVector, anotherVector:KMVector) -> KMVector {
+    var addresult = KMVector(repeating: 0.0, count: vector.count)
     vDSP_vaddD(vector, 1, anotherVector, 1, &addresult, 1, vDSP_Length(vector.count))
     return addresult
 }
 
 //Calculate Euclidean Distance
-private func EuclideanDistance(v1:[Double],v2:[Double]) -> Double {
+private func EuclideanDistance(_ v1:[Double],v2:[Double]) -> Double {
     let distance = EuclideanDistanceSquare(v1,v2: v2)
     return sqrt(distance)
 }
 
-private func EuclideanDistanceSquare(v1:[Double],v2:[Double]) -> Double {
-    var subVec = [Double](count : v1.count, repeatedValue : 0.0)
+private func EuclideanDistanceSquare(_ v1:[Double],v2:[Double]) -> Double {
+    var subVec = [Double](repeating: 0.0, count: v1.count)
     vDSP_vsubD(v1, 1, v2, 1, &subVec, 1, vDSP_Length(v1.count))
     var distance = 0.0
     vDSP_dotprD(subVec, 1, subVec, 1, &distance, vDSP_Length(subVec.count))
