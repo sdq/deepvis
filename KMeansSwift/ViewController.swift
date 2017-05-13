@@ -103,7 +103,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickGithubItem(_ sender: UIBarButtonItem) {
-        let svc = SFSafariViewController(url: URL(string: "https://github.com/sdq/KMeansSwift")!)
+        let svc = SFSafariViewController(url: URL(string: "https://github.com/sdq/kmeans.swift")!)
         svc.delegate = self
         self.present(svc, animated: true, completion: nil)
     }

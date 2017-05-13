@@ -12,6 +12,14 @@ How to use
 ------
 Just drag the kmeans.swift into your project.
 
+```
+let KMeans = KMeansSwift.sharedInstance
+KMeans.clusteringNumber = 2
+KMeans.clustering(500) { [unowned self] (success, centroids, clusters) -> () in
+    ....
+}
+```
+
 Author
 ------
 [sdq](http://shidanqing.net)
