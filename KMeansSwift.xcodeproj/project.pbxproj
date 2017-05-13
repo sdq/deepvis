@@ -12,12 +12,12 @@
 		3256FCC91C2977E200FFD557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3256FCC71C2977E200FFD557 /* Main.storyboard */; };
 		3256FCCB1C2977E200FFD557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3256FCCA1C2977E200FFD557 /* Assets.xcassets */; };
 		3256FCCE1C2977E200FFD557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3256FCCC1C2977E200FFD557 /* LaunchScreen.storyboard */; };
-		3256FCE51C29784100FFD557 /* KMeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256FCE41C29784100FFD557 /* KMeans.swift */; };
+		3256FCE51C29784100FFD557 /* kmeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256FCE41C29784100FFD557 /* kmeans.swift */; };
 		325787FF1DD4725B007F31B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325787FE1DD4725B007F31B9 /* AppDelegate.swift */; };
 		325788011DD4725B007F31B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325788001DD4725B007F31B9 /* ViewController.swift */; };
 		325788031DD4725B007F31B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325788021DD4725B007F31B9 /* Assets.xcassets */; };
 		325788061DD4725C007F31B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325788041DD4725C007F31B9 /* Main.storyboard */; };
-		3257880B1DD47266007F31B9 /* KMeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256FCE41C29784100FFD557 /* KMeans.swift */; };
+		3257880B1DD47266007F31B9 /* kmeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256FCE41C29784100FFD557 /* kmeans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		3256FCCA1C2977E200FFD557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3256FCCD1C2977E200FFD557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3256FCCF1C2977E200FFD557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3256FCE41C29784100FFD557 /* KMeans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMeans.swift; sourceTree = "<group>"; };
+		3256FCE41C29784100FFD557 /* kmeans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kmeans.swift; sourceTree = "<group>"; };
 		325787FC1DD4725B007F31B9 /* KMeansSwiftMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMeansSwiftMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		325787FE1DD4725B007F31B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		325788001DD4725B007F31B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		3256FCE31C29781C00FFD557 /* KMeans */ = {
 			isa = PBXGroup;
 			children = (
-				3256FCE41C29784100FFD557 /* KMeans.swift */,
+				3256FCE41C29784100FFD557 /* kmeans.swift */,
 			);
 			path = KMeans;
 			sourceTree = "<group>";
@@ -156,6 +156,7 @@
 				TargetAttributes = {
 					3256FCBF1C2977E200FFD557 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = H95RU58B4T;
 						LastSwiftMigration = 0810;
 					};
 					325787FB1DD4725B007F31B9 = {
@@ -213,7 +214,7 @@
 			files = (
 				3256FCC61C2977E200FFD557 /* ViewController.swift in Sources */,
 				3256FCC41C2977E200FFD557 /* AppDelegate.swift in Sources */,
-				3256FCE51C29784100FFD557 /* KMeans.swift in Sources */,
+				3256FCE51C29784100FFD557 /* kmeans.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +224,7 @@
 			files = (
 				325788011DD4725B007F31B9 /* ViewController.swift in Sources */,
 				325787FF1DD4725B007F31B9 /* AppDelegate.swift in Sources */,
-				3257880B1DD47266007F31B9 /* KMeans.swift in Sources */,
+				3257880B1DD47266007F31B9 /* kmeans.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H95RU58B4T;
 				INFOPLIST_FILE = KMeansSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -357,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H95RU58B4T;
 				INFOPLIST_FILE = KMeansSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -438,6 +441,7 @@
 				3257880A1DD4725C007F31B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

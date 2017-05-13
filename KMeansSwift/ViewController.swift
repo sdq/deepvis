@@ -55,6 +55,12 @@ class ViewController: UIViewController {
                         }
                         self.spaceView.addSubview(point)
                     }
+                    
+                    // show centroids
+                    let centerFrame = CGRect(x: CGFloat(centroids[index][0]) - 6, y: CGFloat(centroids[index][1]) - 6, width: 12.0, height: 12.0)
+                    let center = UIImageView(frame: centerFrame)
+                    center.image = UIImage(named: "center")
+                    self.spaceView.addSubview(center)
                 }
             }
             self.setButtonEnable(true)
@@ -73,6 +79,7 @@ class ViewController: UIViewController {
                     point.removeFromSuperview()
                 }
                 for index in 0...1 {
+                    
                     for vector in clusters[index] {
                         let pointFrame = CGRect(x: CGFloat(vector[0]) - 10, y: CGFloat(vector[1]) - 10, width: 20.0, height: 20.0)
                         let point = UIImageView(frame: pointFrame)
@@ -83,6 +90,12 @@ class ViewController: UIViewController {
                         }
                         self.spaceView.addSubview(point)
                     }
+                    
+                    // show centroids
+                    let centerFrame = CGRect(x: CGFloat(centroids[index][0]) - 6, y: CGFloat(centroids[index][1]) - 6, width: 12.0, height: 12.0)
+                    let center = UIImageView(frame: centerFrame)
+                    center.image = UIImage(named: "center")
+                    self.spaceView.addSubview(center)
                 }
             }
             self.setButtonEnable(true)

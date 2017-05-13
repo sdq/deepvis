@@ -10,9 +10,7 @@ Demo
 
 How to use
 ------
-Just drag the KMeans.swift into your project.
-
-I will write some detail about this algorithm soon.
+Just drag the kmeans.swift into your project.
 
 Author
 ------
