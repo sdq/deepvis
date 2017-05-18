@@ -6,7 +6,7 @@ It can be used in N-dimensional space!
 
 Demo
 ------
-![demo](https://github.com/sdq/KMeansSwift/blob/master/demo.gif)
+![demo](https://github.com/sdq/kmeans,swift/blob/master/demo.gif)
 
 How to use
 ------
@@ -20,10 +20,13 @@ KMeans.clustering(500) { [unowned self] (success, centroids, clusters) -> () in
 }
 ```
 
+Similar projects
+------
+[pca.swift](https://github.com/sdq/pca.swift)
+
 Author
 ------
 [sdq](http://shidanqing.net)
-
 
 License
 -------
