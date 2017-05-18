@@ -4,9 +4,13 @@ This is a unsupervised machine learning algorithm K-means realized by Swift
 
 It can be used in N-dimensional space!
 
+You can download and play with the demo from [App Store](https://itunes.apple.com/us/app/k-means-an-unsupervised-machine-learning-algorithm/id1070820122)
+
 Demo
 ------
 ![demo](https://github.com/sdq/kmeans,swift/blob/master/demo.gif)
+[App Store](https://itunes.apple.com/us/app/k-means-an-unsupervised-machine-learning-algorithm/id1070820122)
+
 
 How to use
 ------
