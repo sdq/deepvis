@@ -8,7 +8,7 @@ You can download and play with the demo from [App Store](https://itunes.apple.co
 
 Demo
 ------
-![demo](https://github.com/sdq/kmeans,swift/blob/master/demo.gif)
+![demo](https://github.com/sdq/kmeans.swift/blob/master/demo.gif)
 [App Store](https://itunes.apple.com/us/app/k-means-an-unsupervised-machine-learning-algorithm/id1070820122)
 
 
