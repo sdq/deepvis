@@ -1,5 +1,6 @@
 # deepvis
 machine learning algorithms in Swift
+[Download on App Store](https://itunes.apple.com/app/id1070820122)
 
 ### Basic
 1. [vector](https://github.com/sdq/deepvis/blob/master/algorithem/vector.swift)
