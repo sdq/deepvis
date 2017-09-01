@@ -31,6 +31,18 @@ func vecScale(vec:Vector, num:Double) -> Vector {
     return vsresult
 }
 
+func vecDot(vec1:Vector, vec2:Vector) -> Double {
+    var dotresult = 0.0
+    vDSP_dotprD(vec1, 1, vec2, 1, &dotresult, vDSP_Length(vec1.count))
+    return dotresult
+}
+
+func vecDiv(vec1:Vector, vec2:Vector) -> Vector {
+    var divresult = Vector(repeating: 0.0, count: vec1.count)
+    vDSP_vdivD(vec2, 1, vec1, 1, &divresult, 1, vDSP_Length(vec1.count))
+    return divresult
+}
+
 // Mean Vector
 func meanVector(inputVectors:[Vector]) -> Vector {
     let vecDimension = inputVectors[0].count

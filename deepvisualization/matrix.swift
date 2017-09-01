@@ -103,7 +103,7 @@ func invert(inputMatrix: Matrix) -> Matrix? {
         let sss = inMatrix[s...(s+count-1)]
         outputMatrix.append(Array(sss))
     }
-
+    
     return outputMatrix
 }
 

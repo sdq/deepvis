@@ -18,9 +18,9 @@ enum KMeansError: Error {
     case otherReason(String)
 }
 
-class KMeansSwift {
+class KMeans {
     
-    static let sharedInstance = KMeansSwift()
+    static let sharedInstance = KMeans()
     fileprivate init() {}
     
     //MARK: Parameter

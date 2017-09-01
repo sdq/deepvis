@@ -180,8 +180,8 @@ class HierarchicalClustering {
             clusters[im] = clusters[im] + clusters[jm]
             clusterItems[im] = clusterItems[im] + clusterItems[jm]
             merged.append(jm)
-
-
+            
+            
             q -= 1
             let zeroVec:Vector = [Double](repeating: 0.0, count: m)
             distMat = [Vector](repeating: zeroVec, count: m)
@@ -200,7 +200,7 @@ class HierarchicalClustering {
             }
             completion(true, links)
         }
-
+        
     }
     
     func clusterDistance(c1:[Vector], c2:[Vector]) -> Double {

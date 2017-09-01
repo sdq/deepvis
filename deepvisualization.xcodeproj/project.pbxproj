@@ -7,33 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324FB0111F59883E0032D3BA /* vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB00F1F59883E0032D3BA /* vector.swift */; };
+		324FB0121F59883E0032D3BA /* matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB0101F59883E0032D3BA /* matrix.swift */; };
+		324FB0141F5988610032D3BA /* iris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB0131F5988610032D3BA /* iris.swift */; };
+		324FB0161F5988760032D3BA /* pca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB0151F5988760032D3BA /* pca.swift */; };
+		324FB0181F59888A0032D3BA /* lda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB0171F59888A0032D3BA /* lda.swift */; };
+		324FB01A1F5988970032D3BA /* kmeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB0191F5988970032D3BA /* kmeans.swift */; };
+		324FB01C1F5988C40032D3BA /* hierarchical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB01B1F5988C40032D3BA /* hierarchical.swift */; };
 		32B9E7D01F54115B00DE5110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9E7CF1F54115B00DE5110 /* AppDelegate.swift */; };
 		32B9E7D21F54115B00DE5110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9E7D11F54115B00DE5110 /* ViewController.swift */; };
 		32B9E7D41F54115B00DE5110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B9E7D31F54115B00DE5110 /* Assets.xcassets */; };
 		32B9E7D71F54115B00DE5110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B9E7D51F54115B00DE5110 /* Main.storyboard */; };
-		32B9E7DF1F54117300DE5110 /* iris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9E7DE1F54117300DE5110 /* iris.swift */; };
-		32B9E7E21F54117B00DE5110 /* matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9E7E01F54117B00DE5110 /* matrix.swift */; };
-		32B9E7E31F54117B00DE5110 /* vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9E7E11F54117B00DE5110 /* vector.swift */; };
-		32B9E7E51F54118100DE5110 /* pca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9E7E41F54118100DE5110 /* pca.swift */; };
-		32B9E7E71F54118700DE5110 /* hierarchical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9E7E61F54118700DE5110 /* hierarchical.swift */; };
-		32B9E7E91F54119400DE5110 /* kmeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9E7E81F54119400DE5110 /* kmeans.swift */; };
-		32B9E7EB1F5411A100DE5110 /* lda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9E7EA1F5411A100DE5110 /* lda.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		324FB00F1F59883E0032D3BA /* vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector.swift; sourceTree = "<group>"; };
+		324FB0101F59883E0032D3BA /* matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matrix.swift; sourceTree = "<group>"; };
+		324FB0131F5988610032D3BA /* iris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iris.swift; sourceTree = "<group>"; };
+		324FB0151F5988760032D3BA /* pca.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pca.swift; sourceTree = "<group>"; };
+		324FB0171F59888A0032D3BA /* lda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lda.swift; sourceTree = "<group>"; };
+		324FB0191F5988970032D3BA /* kmeans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kmeans.swift; sourceTree = "<group>"; };
+		324FB01B1F5988C40032D3BA /* hierarchical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hierarchical.swift; sourceTree = "<group>"; };
 		32B9E7CC1F54115B00DE5110 /* deepvisualization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deepvisualization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B9E7CF1F54115B00DE5110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32B9E7D11F54115B00DE5110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		32B9E7D31F54115B00DE5110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32B9E7D61F54115B00DE5110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32B9E7D81F54115B00DE5110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32B9E7DE1F54117300DE5110 /* iris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iris.swift; sourceTree = "<group>"; };
-		32B9E7E01F54117B00DE5110 /* matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matrix.swift; sourceTree = "<group>"; };
-		32B9E7E11F54117B00DE5110 /* vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector.swift; sourceTree = "<group>"; };
-		32B9E7E41F54118100DE5110 /* pca.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pca.swift; sourceTree = "<group>"; };
-		32B9E7E61F54118700DE5110 /* hierarchical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hierarchical.swift; sourceTree = "<group>"; };
-		32B9E7E81F54119400DE5110 /* kmeans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kmeans.swift; sourceTree = "<group>"; };
-		32B9E7EA1F5411A100DE5110 /* lda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lda.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 		32B9E7EC1F5411B900DE5110 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				32B9E7DE1F54117300DE5110 /* iris.swift */,
+				324FB0131F5988610032D3BA /* iris.swift */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -88,12 +88,12 @@
 		32B9E7ED1F5411C600DE5110 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
-				32B9E7E81F54119400DE5110 /* kmeans.swift */,
-				32B9E7E61F54118700DE5110 /* hierarchical.swift */,
-				32B9E7E41F54118100DE5110 /* pca.swift */,
-				32B9E7EA1F5411A100DE5110 /* lda.swift */,
-				32B9E7E01F54117B00DE5110 /* matrix.swift */,
-				32B9E7E11F54117B00DE5110 /* vector.swift */,
+				324FB01B1F5988C40032D3BA /* hierarchical.swift */,
+				324FB0191F5988970032D3BA /* kmeans.swift */,
+				324FB0171F59888A0032D3BA /* lda.swift */,
+				324FB0151F5988760032D3BA /* pca.swift */,
+				324FB00F1F59883E0032D3BA /* vector.swift */,
+				324FB0101F59883E0032D3BA /* matrix.swift */,
 			);
 			name = algorithm;
 			sourceTree = "<group>";
@@ -170,15 +170,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32B9E7E21F54117B00DE5110 /* matrix.swift in Sources */,
-				32B9E7E71F54118700DE5110 /* hierarchical.swift in Sources */,
-				32B9E7EB1F5411A100DE5110 /* lda.swift in Sources */,
-				32B9E7DF1F54117300DE5110 /* iris.swift in Sources */,
-				32B9E7E51F54118100DE5110 /* pca.swift in Sources */,
+				324FB0121F59883E0032D3BA /* matrix.swift in Sources */,
+				324FB01C1F5988C40032D3BA /* hierarchical.swift in Sources */,
 				32B9E7D21F54115B00DE5110 /* ViewController.swift in Sources */,
-				32B9E7E31F54117B00DE5110 /* vector.swift in Sources */,
-				32B9E7E91F54119400DE5110 /* kmeans.swift in Sources */,
+				324FB0161F5988760032D3BA /* pca.swift in Sources */,
+				324FB0181F59888A0032D3BA /* lda.swift in Sources */,
 				32B9E7D01F54115B00DE5110 /* AppDelegate.swift in Sources */,
+				324FB0111F59883E0032D3BA /* vector.swift in Sources */,
+				324FB01A1F5988970032D3BA /* kmeans.swift in Sources */,
+				324FB0141F5988610032D3BA /* iris.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +335,7 @@
 				32B9E7DD1F54115B00DE5110 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

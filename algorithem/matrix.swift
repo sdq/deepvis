@@ -78,13 +78,14 @@ func invert(inputMatrix: Matrix) -> Matrix? {
     
     let count = inputMatrix.count
     var inMatrix = inputMatrix.reduce([], {$0+$1})
-    var N = __CLPK_integer(sqrt(Double(inMatrix.count)))
-    var pivots = [__CLPK_integer](repeating: 0, count: Int(N))
-    var workspace = 0.0
-    var error : __CLPK_integer = 0
     
+    var N:__CLPK_integer        = __CLPK_integer( sqrt( Double( inMatrix.count ) ) )
+    // Initialize some arrays for the dgetrf_(), and dgetri_() functions
+    var pivots:[__CLPK_integer] = [__CLPK_integer](repeating: 0, count: Int(N))
+    var workspace:[Double]      = [Double](repeating: 0.0, count: Int(N))
+    var error: __CLPK_integer   = 0
+    // Perform LU factorization
     dgetrf_(&N, &N, &inMatrix, &N, &pivots, &error)
-    
     if error != 0 {
         for i in 0..<count {
             let s = i * count
@@ -94,7 +95,7 @@ func invert(inputMatrix: Matrix) -> Matrix? {
         
         return outputMatrix
     }
-    
+    // Calculate inverse from LU factorization
     dgetri_(&N, &inMatrix, &N, &pivots, &workspace, &N, &error)
     
     for i in 0..<count {
