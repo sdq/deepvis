@@ -20,7 +20,7 @@ func vecAdd(vec1:Vector, vec2:Vector) -> Vector {
 
 func vecSub(vec1:Vector, vec2:Vector) -> Vector {
     var subresult = Vector(repeating: 0.0, count: vec1.count)
-    vDSP_vsubD(vec1, 1, vec2, 1, &subresult, 1, vDSP_Length(vec1.count))
+    vDSP_vsubD(vec2, 1, vec1, 1, &subresult, 1, vDSP_Length(vec1.count))
     return subresult
 }
 
